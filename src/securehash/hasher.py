@@ -28,8 +28,7 @@ def hash_file(
     """
     if algorithm not in SUPPORTED_ALGORITHMS:
         raise ValueError(
-            f"unsupported algorithm {algorithm!r}; choose from "
-            f"{', '.join(SUPPORTED_ALGORITHMS)}"
+            f"unsupported algorithm {algorithm!r}; choose from {', '.join(SUPPORTED_ALGORITHMS)}"
         )
     if chunk_size <= 0:
         raise ValueError("chunk_size must be > 0")
